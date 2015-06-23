@@ -28,7 +28,7 @@
 // default NO
 @property(assign, nonatomic) BOOL stepValueContinuously;
 
-// defafult YES, indicating whether changes in the sliders value generate continuous update events.
+// default YES, indicating whether changes in the sliders value generate continuous update events.
 @property(assign, nonatomic) BOOL continuous;
 
 // default 0.0. this value will be pinned to min/max
@@ -58,13 +58,9 @@
 @property (assign, nonatomic) float lowerHandleHiddenWidth;
 @property (assign, nonatomic) float upperHandleHiddenWidth;
 
-// Images, these should be set before the control is displayed.
-// If they are not set, then the default images are used.
-// eg viewDidLoad
+//TODO: Implement ALL Control States
 
-
-//Probably should add support for all control states... Anyone?
-
+// Images, these should be set before the control is displayed (eg viewDidLoad) otherwise the default images are used.
 @property(retain, nonatomic) UIImage* lowerHandleImageNormal;
 @property(retain, nonatomic) UIImage* lowerHandleImageHighlighted;
 
@@ -81,7 +77,6 @@
 @property (retain, nonatomic) UIImageView* lowerHandle;
 @property (retain, nonatomic) UIImageView* upperHandle;
 
-
 - (void)addSubviews;
 
 //Setting the lower/upper values with an animation :-)
@@ -89,6 +84,5 @@
 
 - (void)setUpperValue:(float)upperValue animated:(BOOL) animated;
 
-- (void) setLowerValue:(float) lowerValue upperValue:(float) upperValue animated:(BOOL)animated;
-
+- (void)setLowerValue:(float) lowerValue upperValue:(float) upperValue animated:(BOOL)animated;
 @end
