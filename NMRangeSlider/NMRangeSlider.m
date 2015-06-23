@@ -193,7 +193,7 @@ NSUInteger DeviceSystemMajorVersion() {
     [UIView animateWithDuration:0.25  delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                        setValuesBlock();
                        [self layoutSubviews];
-                     } completion:^(BOOL finished) {];
+    } completion:^(BOOL finished) {}];
     
   }
   else
